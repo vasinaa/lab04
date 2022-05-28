@@ -44,6 +44,13 @@ jobs:
       shell: bash
       working-directory: hello_world_application
       
+    - name: Build *solver_application*
+      run: |
+        cmake -H. -B_build
+        cmake --build _build
+      shell: bash
+      working-directory: solver_application
+      
       
    
       
