@@ -7,7 +7,7 @@
 * используйте `GitHub Actions` для сборки на операционной системе **Linux**.
 
 
-
+[![CI](https://github.com/vasinaa/lab04/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/vasinaa/lab04/actions/workflows/main.yml)
 
 
 1. Создаём директорию `.github/workflows` и добавляем в неё файл `main.yml`:
@@ -63,4 +63,4 @@ jobs:
       shell: bash
       working-directory: solver_application
       
-      ```
+     
