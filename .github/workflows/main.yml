@@ -37,6 +37,13 @@ jobs:
         cmake --build _build
       shell: bash
       working-directory: formatter_ex_lib
+    - name: Build *hello_world_application*
+      run: |
+        cmake -H. -B_build
+        cmake --build _build
+      shell: bash
+      working-directory: hello_world_application
+      
       
    
       
