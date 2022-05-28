@@ -14,7 +14,7 @@
 
 
 ```yaml
-name: CMake_Build
+name: CI
 
 on:
   push:
@@ -33,32 +33,34 @@ jobs:
     - name: checkout
       uses: actions/checkout@v3
     
-    - name: Build a *formatter* library
+   steps:
+    - name: checkout
+      uses: actions/checkout@v3
+    
+    - name: Build *formatter_lib*
       run: |
         cmake -H. -B_build
         cmake --build _build
       shell: bash
       working-directory: formatter_lib
-      
-    - name: Build a *formatter_ex* library
+    - name: Build *formatter_ex_lib*
       run: |
         cmake -H. -B_build
         cmake --build _build
       shell: bash
       working-directory: formatter_ex_lib
-      
-    - name: Build a *hello_world* application
+    - name: Build *hello_world_application*
       run: |
         cmake -H. -B_build
         cmake --build _build
       shell: bash
       working-directory: hello_world_application
       
-      S
-    - name: Build a *solver* application
+    - name: Build *solver_application*
       run: |
         cmake -H. -B_build
         cmake --build _build
       shell: bash
       working-directory: solver_application
-```
+      
+      ```
